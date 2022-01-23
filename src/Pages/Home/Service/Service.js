@@ -3,7 +3,9 @@ import './Service.css';
 
 const Service = ({ service }) => {
     // const {service} = props;
-    const { name, price, description, img } = service;
+
+    const { img, name, price, description } = service;
+
     return (
         <div className="service">
             <img src={img} alt="" />
