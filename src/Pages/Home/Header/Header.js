@@ -29,14 +29,16 @@ const Header = () => {
 
                             <Navbar.Text>
                                 {users?.email ?
+                                    <> <h2> {users?.displayName}
+                                    </h2>
                                     <button onClick={LogOut}> Signout </button>
-
-                                    : <> <h2> {users?.displayName}</h2>
-                                            <Nav.Link as={Link}             className='text-decoration-none'
-                                            to="login">
-                                            Login
-                                        </Nav.Link>
                                     </>
+                                    :
+                                    <Nav.Link as={Link} className='text-decoration-none'
+                                        to="login">
+                                        Login
+                                    </Nav.Link>
+
                                 }
                             </Navbar.Text>
                         </Nav>
