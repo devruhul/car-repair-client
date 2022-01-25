@@ -25,6 +25,23 @@ function App() {
             <Route path="services" element={<Services />} />
             <Route path="experts" element={<Experts />} />
           </Route>
+          <Route
+            path="services"
+            element=
+            {<PrivateRoute>
+              < Services/>
+            </PrivateRoute>
+            }
+          />
+          <Route
+            path="experts"
+            element=
+            {<PrivateRoute>
+              < Experts/>
+            </PrivateRoute>
+            }
+          />
+
           <Route path="login" element={<Login />} />
         </Routes>
       </AuthProvider>
