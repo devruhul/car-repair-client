@@ -26,16 +26,18 @@ const Header = () => {
                                 to="experts">
                                 Experts
                             </Nav.Link>
-                            <Nav.Link as={Link} className='text-decoration-none'
-                                to="login">
-                                Login
-                            </Nav.Link>
+
                             <Navbar.Text>
                                 {users?.email ?
                                     <button onClick={LogOut}> Signout </button>
-                                    :
-                                    <h2> {users?.displayName}</h2>}
 
+                                    : <> <h2> {users?.displayName}</h2>
+                                            <Nav.Link as={Link}             className='text-decoration-none'
+                                            to="login">
+                                            Login
+                                        </Nav.Link>
+                                    </>
+                                }
                             </Navbar.Text>
                         </Nav>
 
