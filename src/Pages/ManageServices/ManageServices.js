@@ -32,7 +32,6 @@ const ManageServices = () => {
             {
                 services.map(service => <div key={service._id}>
                     {service.name}
-                    <button className='btn btn-success' >Update</button>
                     <button className='btn btn-danger' onClick={() => handleDelete(service._id)}>Delete</button>
                 </div>)
             }

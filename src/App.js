@@ -8,7 +8,7 @@ import Bookings from './Pages/Bookings/Bookings';
 import Login from './Pages/Login/Login';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateOutlet from './Pages/PrivateOutlet/PrivateOutlet';
-import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+// import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import AddService from './Pages/Home/AddService/AddService';
 import ManageServices from './Pages/ManageServices/ManageServices';
 
@@ -23,30 +23,31 @@ function App() {
           <Route path="bookings" element={<Bookings />} >
             <Route path=":bookingId" element={<Booking />} />
           </Route>
-          <Route path="manage" element={<ManageServices/>} />
-
           <Route path="/*" element={<PrivateOutlet />}>
             <Route path="services" element={<Services />} />
             <Route path="experts" element={<Experts />} />
           </Route>
-          <Route
-            path="services"
-            element=
-            {<PrivateRoute>
-              < Services/>
-            </PrivateRoute>
-            }
-          />
-          <Route
-            path="experts"
-            element=
-            {<PrivateRoute>
-              < Experts/>
-            </PrivateRoute>
-            }
-          />
+          {/* alternative private route */
+          
+        //   <Route
+        //   path="services"
+        //   element=
+        //   {<PrivateRoute>
+        //     < Services/>
+        //   </PrivateRoute>
+        //   }
+        // />
+        // <Route
+        //   path="experts"
+        //   element=
+        //   {<PrivateRoute>
+        //     < Experts/>
+        //   </PrivateRoute>
+        //   }
+        // />
+          }
           <Route path="add-service" element={<AddService/>} />
-
+          <Route path="manage" element={<ManageServices />} />
           <Route path="login" element={<Login />} />
         </Routes>
       </AuthProvider>
