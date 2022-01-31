@@ -26,6 +26,14 @@ const Header = () => {
                                 to="experts">
                                 Experts
                             </Nav.Link>
+                            <Nav.Link as={HashLink} className='text-decoration-none'
+                                to="add-service">
+                                Add Service
+                            </Nav.Link>
+                            <Nav.Link as={HashLink} className='text-decoration-none'
+                                to="manage">
+                                Manage Services
+                            </Nav.Link>
 
                             <Navbar.Text>
                                 {users?.email ?
